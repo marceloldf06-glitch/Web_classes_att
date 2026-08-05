@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(6, 7, 7);
+}
+h1.T1{
+    color: #c51717;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 45%;
+}
+h2.hab{
+    color: blueviolet;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h1.T2 {
+    color: #ececec;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 49%;
+}
+h3.item{
+    color: blue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h4.idesc {
+    color: #ececec;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+img.p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80%;
+}
+img.i {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+img.h {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
