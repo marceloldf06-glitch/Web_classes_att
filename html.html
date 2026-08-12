@@ -5,11 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css.css">
     <title>Linguagem Html</title>
+    <style>
+        h1{
+            color: blue;
+        }
+        strong{
+            color: blue;
+        }
+        img{
+            height: 20em;
+        }
+        span{
+            font-size:xx-small;
+        }
+        div.parte1 {
+            color: chartreuse;
+            
+        }
+        section.parte2{
+            color: maroon;
+            border-color: black;
+            border-style:dashed;
+            border-width: 2px;
+        }
+    </style>
 </head>
 <body>
+    <div class="parte1">
     <h1>Origem html</h1>
-    <p>Linguagem de marcação criada por <strong>tim bernes lee 1990</p>
+    <p>Linguagem de marcação criada por <strong>tim bernes lee 1990</strong></p>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmpWNXddq1cj2CAVzr2h46iKBRd3IIxqjwfFUd8hCow&s=10" alt="nokia">
+        </div>
+        <section class="parte2">
         <h2>arquitetura cliente servidor da web</h2>
         <p>
             As tecnologias fundamentais que compoem a web são:
@@ -20,9 +47,11 @@
             <li>html hyper text markup language</li>
             <li>navegador cliente -</li>
             <li>servidor web</li>
-
+            
         </ul>
+        
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240529150129/HTTP-.gif" alt="arquitetura cliente servidor img">
-        <p>após isso a web cresceu/evoluiu e foi incorporado o css e javascript</p>
+        <p>após isso a web cresceu/evoluiu e foi incorporado o <span>css</span> e javascript</p>
+        </section>
 </body>
 </html>
