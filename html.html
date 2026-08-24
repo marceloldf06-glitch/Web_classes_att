@@ -29,9 +29,10 @@
             border-style:dashed;
             border-width: 2px;
         }
-        table,  td{
+        table#SEPEI,#SEPEI  td,#SEPEI th{
             border: 1px solid black;
             border-collapse: collapse;
+            background-color: lightblue;
         }
         
     </style>
@@ -107,7 +108,25 @@
                     <td >4,54</td>
                 </tr>
             </table>
-
+            <table id = "SEPEI">
+                <caption>SEPEI 2026</caption>
+                <tr><th>indice</th><th>nome</th><th>Idade</th></tr>
+                <tr><td>1</td><td>joana</td><td>18</td></tr>
+                <tr><td>2</td><td>Oliver</td><td>18</td></tr>
+                <tr><td>3</td><td>Kiara</td><td>17</td></tr>
+                <tr><td>4</td><td>Maria</td><td>17</td></tr>
+                <tr><td>5</td><td>Heloisa</td><td>17</td></tr>
+                <tr><td colspan="2">Total alunos</td><td>5</td></tr>
+            </table>
+        </section>
+        <section>
+            <form action="">
+                <label for="inputnome">Nome: </label>
+                <input type="text"id="inputnome">
+                <label for="inputtelefone">Telefone: </label>
+                <input type="tel" name="" id="inputtelefone">
+                <input type="submit" value="Enviar">
+            </form>
         </section>
 </body>
 </html>
