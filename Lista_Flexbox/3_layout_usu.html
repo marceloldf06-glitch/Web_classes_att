@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+        .fundo {
+            width: 620px;
+            max-width: 100%;
+            height: 310px;
+            margin: auto;
+            background-color: #aaa;
+            border-top: 2px solid #333;
+            border-bottom: 2px solid #888;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cartao {
+            width: 265px;
+            background-color: white;
+            border-radius: 2px;
+            box-shadow: 0 1px 4px #777;
+
+            display: flex;
+            flex-direction: column;
+            padding: 5px 12px;
+        }
+        .usuario {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 66px;
+            padding: 7px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .usuario:last-child {
+            border-bottom: none;
+        }
+        .usuario img {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .informacoes {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 0;
+        }
+        .nome {
+            font-size: 12px;
+            font-weight: bold;
+            color: #555;
+        }
+        .endereco {
+            font-size: 11px;
+            color: #aaa;
+        }
+        @media (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+            .fundo {
+                height: 310px;
+            }
+            .cartao {
+                width: 265px;
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+        <div class="cartao">
+            <div class="usuario">
+                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSiGBuz_qmnMuemji0QIlWPG7L842mhK7AXAefhg5hX3uhaoRSoDLbuz_BsdJL_Gm-wCWYK-4zNcDRhUHc"
+                     alt="trump">
+                <div class="informacoes">
+                    <span class="nome">Trump 67</span>
+                    <span class="endereco">765 Shady Ln Dr</span>
+                </div>
+            </div>
+            <div class="usuario">
+                <img src="https://assets.change.org/photos/5/km/is/aNkmissvDYvpppC-400x225-noPad.jpg?1581981981"
+                     alt="freddie">
+                <div class="informacoes">
+                    <span class="nome">Mercury Platina</span>
+                    <span class="endereco">420 Paddock Way</span>
+                </div>
+            </div>
+            <div class="usuario">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/e/ef/Sulley.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"
+                     alt="monstro">
+                <div class="informacoes">
+                    <span class="nome">Sullivan</span>
+                    <span class="endereco">672 Airplane Ave</span>
+                </div>
+            </div>
+            <div class="usuario">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbMiEBd233NQ_qBAFkBkJydYKiV4bcLaOTUfnwqHr8sw&s=10"
+                     alt="goat">
+                <div class="informacoes">
+                    <span class="nome">Subaru Natsuki</span>
+                    <span class="endereco">685 Blossom Hill Rd</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

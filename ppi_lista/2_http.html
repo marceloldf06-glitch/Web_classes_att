@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h2>O que é o protocolo <strong>HTTP</strong> ?</h2> 
+    <p> <em>HTTP</em> (do inglês Hypertext Transfer Protocol, ou Protocolo de Transferência de Hipertexto) é o protocolo de comunicação fundamental 
+        usado para transferir dados na internet entre um cliente (como o seu navegador) e um servidor web.</p>
+
+    <h2>Como é usado na Web ?</h2>
+    
+    <p>O HTTP é utilizado sempre que um navegador precisa solicitar recursos
+    de um servidor Web. Esses recursos podem ser páginas HTML, imagens,
+    arquivos CSS, JavaScript, vídeos, dados de APIs e outros conteúdos.<br>
+    Por exemplo ao acessar um site o navegador envia um <em>request</em>, então o servidor processa e envia uma <em>response</em>.</p>
+    <img src="https://miro.medium.com/1*uQgK8zVKmCKvDYmEDucMyg.png" alt="response/request" height="280px">
+<hr>
+    <h2>Detalhes dos campos da requisição</h2>
+
+<table border="1">
+    <head>
+        <tr>
+            <th>Campo</th>
+            <th>Exemplo</th>
+            <th>Descrição</th>
+        </tr>
+    </head>
+
+    <body>
+
+        <tr>
+            <td>Método</td>
+            <td>GET</td>
+            <td>
+                Indica a operação que o cliente deseja realizar.
+                GET é utilizado normalmente para solicitar um recurso.
+            </td>
+        </tr>
+
+        <tr>
+            <td>URL/Caminho</td>
+            <td>/index.html</td>
+            <td>
+                Indica o recurso que está sendo solicitado ao servidor.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Versão HTTP</td>
+            <td>HTTP/1.1</td>
+            <td>
+                Indica a versão do protocolo utilizada na comunicação.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Host</td>
+            <td>www.exemplo.com</td>
+            <td>
+                Identifica o servidor ou domínio ao qual a requisição é destinada.
+            </td>
+        </tr>
+
+        <tr>
+            <td>User-Agent</td>
+            <td>Mozilla/5.0</td>
+            <td>
+                Informa características do navegador ou programa que realizou
+                a requisição.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Accept</td>
+            <td>text/html</td>
+            <td>
+                Indica quais tipos de conteúdo o cliente consegue receber.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Accept-Language</td>
+            <td>pt-BR</td>
+            <td>
+                Indica os idiomas preferidos pelo cliente.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Connection</td>
+            <td>keep-alive</td>
+            <td>
+                Indica que a conexão pode ser mantida para outras requisições.
+            </td>
+        </tr>
+       </table>
+    </body>
+</body> 
+</html>

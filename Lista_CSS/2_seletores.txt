@@ -1,0 +1,15 @@
+Item 1: Ficou Vermelho por ser li (/*regra 1*/ li{color:red;}) e não entrar na especificidade de nenhum outro seletor
+
+Item 2: Ficou Cinza por entrar na especificidade da regra 3 (/*regra 3*/ .fruta{color:gray})
+
+Item 3: Ficou Azul por ter o id="lip2" entrando na especificidade da regra 6 (/*regra 6*/ #lip1,#lip2,#lip3{color:blue})
+
+Item 4: Ficou laranja por entrar na especificidade da regra 7, ter o id="lip3" e a classe="fruta" (/*regra 7*/ #lip3.fruta{color:orange})
+
+Item 5: Ficou Cinza por entrar na especificidade da regra 3 (/*regra 3*/ .fruta{color:gray})
+
+Item 6: Ficou Preto por entrar na especificidade da regra 4, ser da classe="churras" (/*regra 4*/ li+li.churras{color: black;})
+
+Item 7: Ficou Preto por entrar na especificidade da regra 4, ser da classe="churras" (/*regra 4*/ li+li.churras{color: black;})
+
+Item 8: Ficou magenta por entrar na especificidade da regra 5, ser da classe="churras" e ter [draggable="true"] (/*regra 5*/ .churras[draggable="true"]{color: magenta;})

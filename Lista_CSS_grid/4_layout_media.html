@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Media</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .container {
+            min-height: 100vh;
+            padding: 15px;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 60px 50px 1fr 35px 50px;
+            grid-template-areas:
+                "header header header"
+                "left banner right"
+                "left main right"
+                "left low right"
+                "footer footer footer";
+        }
+        header {
+            grid-area: header;
+            background-color: #f0b400;
+        }
+        .banner {
+            grid-area: banner;
+            background-color: #d93632;
+        }
+        .left {
+            grid-area: left;
+            background-color: #079653;
+        }
+        main {
+            grid-area: main;
+            background-color: #3979e8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+        .right {
+            grid-area: right;
+            background-color: #f0b400;
+        }
+        .low {
+            grid-area: low;
+            background-color: #079653;
+        }
+        footer {
+            grid-area: footer;
+            background-color: #3979e8;
+        }
+        header,.banner,.left,.right,.low,footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                min-height: 100vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 40px 35px 35px minmax(300px, 1fr) 40px 35px 35px;
+                grid-template-areas:
+                    "header"
+                    "banner"
+                    "left"
+                    "main"
+                    "right"
+                    "low"
+                    "footer";
+            }
+            main {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <section class="banner">Banner</section>
+        <aside class="left">Left Aside</aside>
+        <main>
+            <h2>Main Content</h2>
+            <p class="dimensoes"></p>
+        </main>
+        <aside class="right">Right Aside</aside>
+        <section class="low">Low Content</section>
+        <footer>Footer</footer>
+    </div>
+    <script>
+        const main = document.querySelector("main");
+        const dimensoes = document.querySelector(".dimensoes");
+        function atualizarDimensoes() {
+            dimensoes.textContent =
+                `Width: ${main.clientWidth}, Height: ${main.clientHeight}`;
+        }
+        window.addEventListener("resize", atualizarDimensoes);
+        atualizarDimensoes();
+    </script>
+</body>
+</html>

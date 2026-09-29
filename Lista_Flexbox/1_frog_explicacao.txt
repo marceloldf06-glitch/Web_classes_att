@@ -1,0 +1,15 @@
+Explicando o nível 11:
+Nesse nível o jogo quer que coloquemos os sapos nas planta da agua que estão em coluna e na parte de baixo da tela.
+
+Para isso devemos usar: flex-direction: column para colocar os sapos em coluna e justify-content: flex-end
+para colocá-los na parte de baixo.
+
+
+Explicando o nível 12:
+Nesse nível o jogo quer que coloquemos os sapos nas planta da agua que estão em coluna e 
+espaçados igualmente entre si e nas cores contrárias dos sapos.
+
+Para isso devemos usar: flex-direction: column-reverse para colocar os sapos em coluna e reverter a sequência
+e justify-content: space-between para os espaçar igualmente entre si.
+
+

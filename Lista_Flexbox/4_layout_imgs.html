@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 65px;
+        }
+        .galeria {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            height: 275px;
+        }
+        .imagem {
+            position: relative;
+            height: 100%;
+            flex: 0.6;
+            min-width: 0;
+            border-radius: 25px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: flex 0.5s ease;
+        }
+        .imagem img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .imagem.principal {
+            flex: 5;
+            background-image:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.7),
+                    transparent 45%
+                ),
+                url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1422450/52159118573367c304c43fc9ed85588c0c518a19/ss_52159118573367c304c43fc9ed85588c0c518a19.1920x1080.jpg?t=1769127177");
+        }
+        .imagem:nth-child(1) {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKiKl_uLDkaOK6ltrsUI_eAbkwpyyU2MznnOHUkmilhAoUEc1BAJ5di4G2&s=10");
+        }
+        .imagem:nth-child(3) {
+            background-image: url("https://deadlock.wiki/images/f/f4/Deadlock.jpg");
+        }
+        .imagem:nth-child(4) {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3blvGsqmd3DRHqYEGWWCdobbMy-pZgkPGbi_CkdiQKLg7VRm2W0FYh2Pw&s=10");
+        }
+        .imagem:nth-child(5) {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp3fB8EP0QFjAfJCpsEJ99UxoXDHb-tDANWPBZsKkR8g&s=10");
+        }
+        .icone {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+        .informacoes {
+            position: absolute;
+            bottom: 12px;
+            left: 55px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .informacoes h3 {
+            font-size: 14px;
+        }
+        .informacoes p {
+            font-size: 12px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            h2 {
+                margin-bottom: 35px;
+                font-size: 15px;
+            }
+            .galeria {
+                gap: 7px;
+                height: 230px;
+            }
+            .imagem {
+                flex: 0.4;
+                border-radius: 18px;
+            }
+            .imagem.principal {
+                flex: 4;
+            }
+            .informacoes {
+                left: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <div class="imagem">
+            <div class="icone">🏃</div>
+        </div>
+        <div class="imagem principal">
+            <div class="icone">❄️</div>
+            <div class="informacoes">
+                <h3>Deadlock</h3>
+                <p>Um baita dum jogasso</p>
+            </div>
+        </div>
+        <div class="imagem">
+            <div class="icone">🌲</div>
+        </div>
+        <div class="imagem">
+            <div class="icone">💧</div>
+        </div>
+        <div class="imagem">
+            <div class="icone">⚙️</div>
+        </div>
+    </div>
+</body>
+</html>

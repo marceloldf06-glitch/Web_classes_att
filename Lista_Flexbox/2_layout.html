@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .container {
+            width: 224px;
+            height: 375px;
+            border: 2px solid #b000ff;
+            border-radius: 5px;
+            padding: 25px 18px 23px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            color: #aaa;
+            font-size: 12px;
+            margin-bottom: 34px;
+        }
+        .barras {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .barra {
+            width: 100%;
+            height: 19px;
+            background-color: #eaeaea;
+            border-radius: 3px;
+        }
+        .perfil {
+            margin-top: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .foto {
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            background-color: #e3e3e3;
+        }
+        .botao {
+            width: 78px;
+            height: 19px;
+            background-color: #eaeaea;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Company Logo</div>
+        <div class="barras">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+        </div>
+        <div class="perfil">
+            <div class="foto"></div>
+            <div class="botao"></div>
+        </div>
+    </div>
+</body>
+</html>

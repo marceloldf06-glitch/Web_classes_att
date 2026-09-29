@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Adapta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333333;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            min-height: 450px;
+            margin: auto;
+            padding: 8px;
+            background-color: #eeeeee;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1.2fr 0.4fr;
+            grid-template-rows: 1fr 0.8fr 0.6fr;
+            grid-template-areas:
+                "web animate html lateral"
+                "css animate position lateral"
+                "flex flex grid lateral";
+            gap: 5px;
+        }
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+            border: 2px solid #ffffff;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333333;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s, filter 0.2s;
+        }
+        .item:hover {
+            transform: scale(1.02);
+            filter: brightness(0.95);
+        }
+        .web {
+            grid-area: web;
+            background-color: #ff9f1c;
+        }
+        .html {
+            grid-area: html;
+            background-color: #cce3df;
+        }
+        .css {
+            grid-area: css;
+            background-color: #b8cbe5;
+        }
+        .animate {
+            grid-area: animate;
+            background-color: #f5b5a5;
+        }
+        .position {
+            grid-area: position;
+            background-color: #b1c95d;
+        }
+        .flex {
+            grid-area: flex;
+            background-color: #f5b52e;
+        }
+        .grid {
+            grid-area: grid;
+            background-color: #b1c95d;
+        }
+        .lateral {
+            grid-area: lateral;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+        }
+        .circulo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .circulo:nth-child(1) {
+            background-color: #f18b62;
+        }
+        .circulo:nth-child(2) {
+            background-color: #d9baba;
+        }
+        .circulo:nth-child(3) {
+            background-color: #cbd5a9;
+        }
+        .circulo:nth-child(4) {
+            background-color: #d5c8e8;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                min-height: auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: none;
+                grid-template-areas:
+                    "web"
+                    "html"
+                    "css"
+                    "animate"
+                    "position"
+                    "flex"
+                    "grid"
+                    "lateral";
+            }
+            .item {
+                min-height: 90px;
+            }
+            .animate {
+                min-height: 120px;
+            }
+            .lateral {
+                flex-direction: row;
+                min-height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Conteúdos de Desenvolvimento Web</h1>
+    <main class="container">
+        <a class="item web" href="#web">WEB</a>
+        <a class="item html" href="#html">HTML</a>
+        <a class="item css" href="#css">CSS</a>
+        <a class="item animate" href="#animate">Animate</a>
+        <a class="item position" href="#position">Position</a>
+        <a class="item flex" href="#flex">Flexbox</a>
+        <a class="item grid" href="#grid">Grid</a>
+        <div class="lateral">
+            <div class="circulo"></div>
+            <div class="circulo"></div>
+            <div class="circulo"></div>
+            <div class="circulo"></div>
+        </div>
+    </main>
+    <section id="web">
+        <h2>WEB</h2>
+        <p>Desenvolvimento de sites e aplicações para a internet.</p>
+    </section>
+    <section id="html">
+        <h2>HTML</h2>
+        <p>Estrutura e organização do conteúdo de uma página.</p>
+    </section>
+    <section id="css">
+        <h2>CSS</h2>
+        <p>Estilização, cores, fontes e aparência dos elementos.</p>
+    </section>
+    <section id="animate">
+        <h2>Animate</h2>
+        <p>Criação de animações e transições em páginas web.</p>
+    </section>
+    <section id="position">
+        <h2>Position</h2>
+        <p>Posicionamento de elementos com propriedades CSS.</p>
+    </section>
+    <section id="flex">
+        <h2>Flexbox</h2>
+        <p>Organização e alinhamento de elementos em linhas ou colunas.</p>
+    </section>
+    <section id="grid">
+        <h2>Grid</h2>
+        <p>Criação de layouts organizados em linhas e colunas.</p>
+    </section>
+    <style>
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        section h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</body>
+</html>

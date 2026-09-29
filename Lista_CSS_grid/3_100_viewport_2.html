@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 view 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Georgia, serif;
+            background-color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 136px 91px 136px 91px;
+            grid-template-rows: 91px 196px;
+            gap: 8px;
+        }
+        .bloco {
+            background-color: #404042;
+            color: #eeeeee;
+            border: 1px solid #777;
+            border-radius: 5px;
+            padding: 17px;
+            font-size: 22px;
+        }
+        .a {
+            grid-column: 1 / 3;
+            grid-row: 1;
+        }
+        .b {
+            grid-column: 4;
+            grid-row: 1;
+        }
+        .c {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .painel {
+            grid-column: 2 / 5;
+            grid-row: 2;
+            background-color: #404042;
+            border: 1px solid #777;
+            border-radius: 5px;
+            padding: 17px;
+            display: grid;
+            grid-template-columns: 1fr 1.8fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 8px;
+        }
+        .item {
+            background-color: #cccccc;
+            color: #555555;
+            border: 1px solid #888;
+            border-radius: 5px;
+            padding: 17px;
+            font-size: 32px;
+        }
+        @media (max-width: 550px) {
+            .container {
+                width: 90%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 80px 150px auto auto;
+            }
+            .a {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .b {
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .c {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .painel {
+                grid-column: 2;
+                grid-row: 2 / 5;
+                padding: 10px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 90px);
+            }
+            .item {
+                padding: 10px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bloco a">A</div>
+        <div class="bloco b">B</div>
+        <div class="bloco c">C</div>
+        <div class="painel">
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+            <div class="item">M</div>
+            <div class="item">I</div>
+            <div class="item">J</div>
+        </div>
+    </div>
+</body>
+</html>

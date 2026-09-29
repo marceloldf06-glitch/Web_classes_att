@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 View</title>
+
+<style>
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+#page{
+display: grid;
+height: 100vh;
+grid-template-areas: 
+"Header Header"
+"Nav Content"
+"Nav Content"
+"Nav Footer";
+grid-template-columns: 20% 80%;
+grid-template-rows: 20% 60% 20%;
+}
+Header{grid-area: Header;
+background-color: chocolate;
+}
+Nav{grid-area: Nav;
+background-color: cornflowerblue;
+}
+Content{grid-area: Content;
+background-color: chartreuse;
+}
+Footer{grid-area: Footer;
+background-color: blueviolet;
+}
+.panel{border: 1px solid black;}
+</style>
+</head>
+<body>
+<div id="page">
+  <header class="panel" id="Header">Header</header>
+  <Nav class="panel" id="Nav">Navigation</Nav>
+  <Content class="panel" id="Content">Content</Content>
+  <footer class="panel" id="Footer">Footer</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 12px;
+        }
+        .perfil {
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            min-height: 100vh;
+            margin: auto;
+        }
+        .lateral {
+            background-color: #3b414c;  
+            color: white;
+            width: 175px;
+            padding: 15px 13px;
+            flex-shrink: 0;
+        }
+        .foto {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 18px;
+        }
+        .lateral h3 {
+            font-size: 13px;
+            font-weight: normal;
+            margin: 15px 0 12px;
+        }
+        .lateral hr {
+            border: 0;
+            border-top: 2px solid #aeb3ba;
+            margin: 0 0 15px;
+        }
+        .lateral p {
+            margin: 0 0 10px;
+            line-height: 1.3;
+            overflow-wrap: anywhere;
+        }
+        .lateral strong {
+            display: block;
+            font-weight: normal;
+        }
+        .conteudo {
+            flex: 1;
+            min-width: 0;
+            padding: 5px 16px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0 0 12px;
+        }
+        .linha {
+            border: 0;
+            border-top: 2px solid #e5e5e5;
+            margin: 0 0 12px;
+        }
+        .descricao {
+            color: #666;
+            font-size: 10px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .conteudo h2 {
+            font-size: 14px;
+            font-weight: normal;
+            margin: 12px 0;
+        }
+        .experiencia {
+            border-top: 2px solid #e5e5e5;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        .cabecalho {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .cargo {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0 0 4px;
+        }
+        .local {
+            font-style: italic;
+            color: #555;
+            margin: 0 0 5px;
+        }
+        .data {
+            white-space: nowrap;
+            color: #666;
+        }
+        ul {
+            padding-left: 13px;
+            margin: 5px 0 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="perfil">
+        <aside class="lateral">
+            <img src="https://cdn.pixabay.com/photo/2019/03/12/12/19/brazil-4050650_1280.jpg" alt="Foto de Joana Barbosa"
+                 class="foto">
+            <h3>Pessoal</h3>
+            <hr>
+            <p>
+                <strong>Nome</strong>
+                Joana Barbosa
+            </p>
+            <p>
+                <strong>Endereço</strong>
+                Rua da Paz, 250<br>
+                1700-011 Lisboa
+            </p>
+            <p>
+                <strong>Número de telefone</strong>
+                9630002121
+            </p>
+            <p>
+                <strong>Email</strong>
+                exemplo@cvmaker.pt
+            </p>
+            <h3>Interesses</h3>
+            <hr>
+        </aside>
+        <main class="conteudo">
+            <h1>Joana Barbosa</h1>
+            <hr class="linha">
+            <p class="descricao">
+                Uma marketer digital com sentido de missão e mais de três
+                anos de experiência em conduzir iniciativas promocionais.
+                Sou uma especialista em online marketing, lead generation
+                e nurturing. Tenho uma comunicação exemplar, aptidões
+                interpessoais e trabalho bem sob pressão de forma a atingir
+                os objetivos.
+            </p>
+            <h2>Experiência profissional</h2>
+            <div class="experiencia">
+                <div class="cabecalho">
+                    <div>
+                        <p class="cargo">Junior SEO Marketer</p>
+                        <p class="local">Cyanca, Lisboa</p>
+                    </div>
+                    <span class="data">2017 - 2019</span>
+                </div>
+                <ul>
+                    <li>Página on/off SEO</li>
+                    <li>Estratégias de linkbuilding</li>
+                    <li>Criação de conteúdo relevante</li>
+                    <li>Trabalho com ferramentas online: Ahrefs, Google Analytics, Google Search Console, Google Adwords</li>
+                </ul>
+            </div>
+            <div class="experiencia">
+                <div class="cabecalho">
+                    <div>
+                        <p class="cargo">Assistente de Vendas</p>
+                        <p class="local">Salsa, Lisboa</p>
+                    </div>
+                    <span class="data">2015 - 2016</span>
+                </div>
+                <ul>
+                    <li>Contribuição para os objetivos de vendas</li>
+                    <li>Gestão de inventário</li>
+                    <li>Apoio a clientes</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

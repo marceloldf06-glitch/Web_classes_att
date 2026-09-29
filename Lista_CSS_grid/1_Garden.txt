@@ -1,0 +1,4 @@
+Grid Garden nível 1:
+Esse nível pede que regue as plantas na terceira coluna.
+
+Para isso usamos grid-column-start: 3 para iniciar na terceira coluna assim regando a planta.
