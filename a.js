@@ -35,9 +35,11 @@ let carnes = ["alcatra", "maminha", "colxão mole", "colxão duro"]
 carnes.forEach(element => {
     console.log(element)
 });
-
-
-
+var nomeaseparar = "marcelo lucas dias filho"
+console.log(nomeaseparar.split("").reverse().join(""));
+console.log(carnes.filter((e, i) =>{return !e.split("").includes("i")}))
+console.log(JSON.stringify(carnes))
+console.log(JSON.parse("[\"bla\", \"bla1\"]"))
 
 
 
