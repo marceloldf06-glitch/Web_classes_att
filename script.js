@@ -192,11 +192,11 @@ numf.id = "numf"
 div.appendChild(numf)
 div.appendChild(document.createElement("br"))
 let btnprimo = document.createElement("BUTTON")
-btnprimo.innerHTML = "numeroprimo"
+btnprimo.innerHTML = "Numeros primos"
 div.appendChild(btnprimo)
 div.appendChild(document.createElement("br"))
 
-function eprimo(x){
+function primo(num){
  if (num <= 1) return false;
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
@@ -209,11 +209,162 @@ function eprimo(x){
 
   
 btnprimo.addEventListener("click", () => {
-        for(let x = document.getElement("numi").value; x <= document.getElementById("numf").value ; x++){
-        if(eprimo(x)){
-        div.appendChild(document.createElement("label").innerHTML(x))
+    mi = Number.parseFloat(document.getElementById("numi").value)
+    ma = Number.parseFloat(document.getElementById("numf").value)
+        for(let x = mi; x <= ma; x++){
+        if(primo(x) == true){
+        let vprimo = document.createElement("label")
+        vprimo.innerHTML = x
+        div.appendChild(vprimo)
         div.appendChild(document.createElement("br"))
-        }      
-    
+        }         
     }
 })
+
+let palavra = document.createElement("input")
+palavra.id = "p"
+div.appendChild(palavra)
+div.appendChild(document.createElement("br"))
+let btnpalindromo = document.createElement("BUTTON")
+btnpalindromo.innerHTML = "Numeros primos"
+div.appendChild(btnpalindromo)
+div.appendChild(document.createElement("br"))
+let p = document.createElement("label")
+div.appendChild(p)
+div.appendChild(document.createElement("br"))
+btnpalindromo.addEventListener("click", () =>{
+    let palavrap = String(document.getElementById("p").value).toLowerCase()
+    let palavrai = palavrap.split('').reverse().join('')
+    console.log(palavrap)
+    console.log(palavrai)
+    if(String(palavrai) === String(palavrap)){    
+        p.innerHTML ="É palindromo"      
+    }else{   
+        p.innerHTML ="Não é palindromo"    
+    }
+})
+
+let conta = document.createElement("input")
+conta.id = "p"
+div.appendChild(conta)
+div.appendChild(document.createElement("br"))
+let btnconta = document.createElement("BUTTON")
+btnconta.innerHTML = "calcular"
+div.appendChild(btnconta)
+div.appendChild(document.createElement("br"))
+c = document.createElement("label")
+div.appendChild(c)
+div.appendChild(document.createElement("br"))
+btnconta.addEventListener("click", () =>{
+
+})
+let calculadora = document.createElement("div")
+calculadora.classList.add('calculadora')
+document.body.appendChild(calculadora)
+
+let resultado = document.createElement("div")
+resultado.innerHTML = "0"
+resultado.classList.add('resultado')
+calculadora.appendChild(resultado)
+
+let buttons = document.createElement("div")
+buttons.classList.add('buttons')
+calculadora.appendChild(buttons)
+
+let mais = document.createElement("BUTTON")
+mais.innerHTML = "+"
+calculadora.classList.add('botao')
+buttons.appendChild(mais)
+
+let menos = document.createElement("BUTTON")
+menos.innerHTML = "-"
+calculadora.classList.add('botao')
+buttons.appendChild(menos)
+
+let mult = document.createElement("BUTTON")
+mult.innerHTML = "x"
+calculadora.classList.add('botao')
+buttons.appendChild(mult)
+
+let di = document.createElement("BUTTON")
+di.innerHTML = "/"
+calculadora.classList.add('botao')
+buttons.appendChild(di)
+
+buttons.appendChild(document.createElement("br"))
+
+let sete = document.createElement("BUTTON")
+sete.innerHTML = "7"
+calculadora.classList.add('botao')
+buttons.appendChild(sete)
+
+let oito = document.createElement("BUTTON")
+oito.innerHTML = "8"
+calculadora.classList.add('botao')
+buttons.appendChild(oito)
+
+let nove = document.createElement("BUTTON")
+nove.innerHTML = "9"
+calculadora.classList.add('botao')
+buttons.appendChild(nove)
+
+let igual = document.createElement("BUTTON")
+igual.innerHTML = "="
+calculadora.classList.add('botao')
+buttons.appendChild(igual)
+
+buttons.appendChild(document.createElement("br"))
+
+let quatro = document.createElement("BUTTON")
+quatro.innerHTML = "4"
+calculadora.classList.add('botao')
+buttons.appendChild(quatro)
+
+let cinco = document.createElement("BUTTON")
+cinco.innerHTML = "5"
+calculadora.classList.add('botao')
+buttons.appendChild(cinco)
+
+let seis = document.createElement("BUTTON")
+seis.innerHTML = "6"
+calculadora.classList.add('botao')
+buttons.appendChild(seis)
+
+let ac = document.createElement("BUTTON")
+ac.innerHTML = "ac"
+calculadora.classList.add('botao')
+buttons.appendChild(ac)
+
+buttons.appendChild(document.createElement("br"))
+
+let um = document.createElement("BUTTON")
+um.innerHTML = "1"
+calculadora.classList.add('botao')
+buttons.appendChild(um)
+
+let dois = document.createElement("BUTTON")
+dois.innerHTML = "2"
+calculadora.classList.add('botao')
+buttons.appendChild(dois)
+
+let tres = document.createElement("BUTTON")
+tres.innerHTML = "3"
+calculadora.classList.add('botao')
+buttons.appendChild(tres)
+
+let ponto = document.createElement("BUTTON")
+ponto.innerHTML = "."
+calculadora.classList.add('botao')
+buttons.appendChild(ponto)
+
+buttons.appendChild(document.createElement("br"))
+
+let zero = document.createElement("BUTTON")
+zero.innerHTML = "0"
+calculadora.classList.add('botao')
+buttons.appendChild(zero)
+
+const btn = document.querySelector(".botao")
+btn.style.margin = 0
+btn.style.padding = 0
+btn.style.boxSizing = "border-box"
