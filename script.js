@@ -179,3 +179,41 @@ addEventListener("keypress", (Space)=>{
     let codigo = "#" + rd.toString(16) + gn.toString(16) + be.toString(16) 
     div.style.backgroundColor = codigo
 })
+
+
+
+
+let numi = document.createElement("input")
+numi.id = "numi"
+div.appendChild(numi)
+div.appendChild(document.createElement("br"))
+let numf = document.createElement("input")
+numf.id = "numf"
+div.appendChild(numf)
+div.appendChild(document.createElement("br"))
+let btnprimo = document.createElement("BUTTON")
+btnprimo.innerHTML = "numeroprimo"
+div.appendChild(btnprimo)
+div.appendChild(document.createElement("br"))
+
+function eprimo(x){
+ if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+  
+btnprimo.addEventListener("click", () => {
+        for(let x = document.getElement("numi").value; x <= document.getElementById("numf").value ; x++){
+        if(eprimo(x)){
+        div.appendChild(document.createElement("label").innerHTML(x))
+        div.appendChild(document.createElement("br"))
+        }      
+    
+    }
+})
