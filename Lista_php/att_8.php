@@ -17,9 +17,12 @@
 if(isset($_POST['num'])){
 $num = $_POST['num'];
 function soma($num) {
-    for($i = 1; $i <= 10; $i++){
-        echo ($num*$i)."<br>";
+    $nums = explode(" ", $num);
+    global $soma;
+    foreach($nums as $numes){
+        $soma += $numes;
     };
+    echo $soma;
 }
 soma($num);
 }
